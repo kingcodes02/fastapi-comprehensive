@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from .database import engine
@@ -29,4 +29,4 @@ app.include_router(vote.router)
 
 @app.get('/')
 def root():
-    return "This is my fastAPI comprehensive tutorial"
+    return {"message": "This is my fastAPI comprehensive tutorial!!!!"}
